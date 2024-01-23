@@ -42,7 +42,7 @@ To use the canister, you have 2 options.
 2. Or you can call the `get_screenshot` method with a URL as input. For example, to take a screenshot of the DFINITY website, run the following command:
 
 ```bash
-dfx canister call screenshot_service get_screenshot '("https://dfinity.org/")'
+dfx canister call http_icp_backend get_screenshot '("https://dfinity.org/")'
 ```
 
 
