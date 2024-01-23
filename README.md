@@ -12,31 +12,36 @@ The HTTP request is made using the `http_request` function from the `ic_cdk::api
 
 To deploy this canister, follow these steps:
 
-1. Install the DFINITY SDK.
+1. Install [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install/).
+   
 2. Clone this repository.
+ ```bash
+   git clone https://github.com/mervanerenci/icp_http_request.git
+```
 3. Navigate to the project directory.
-4. Run 
+   
+4. Start a local Internet Computer replica by running:
 ```bash 
    dfx start --background
 ``` 
-  to start a local Internet Computer replica.
-5. Run 
+
+5. Replace `"YOUR-API-KEY-HERE"` in the `get_screenshot` method with your actual RapidAPI key before deploying.
+6. Deploy the canister to the local replica. 
 ```bash
    dfx deploy
 ``` 
-to deploy the canister to the local replica.
 
-Please replace `"YOUR-API-KEY-HERE"` with your actual RapidAPI key before deploying.
 
 ## Usage
 
-To use the canister, call the `get_screenshot` method with a URL as input. For example, to take a screenshot of the DFINITY website, run the following command:
+To use the canister, you have 2 options. 
+1. use generated Candid UI to call the `get_screenshot` method.
+
+2. Or you can call the `get_screenshot` method with a URL as input. For example, to take a screenshot of the DFINITY website, run the following command:
 
 ```bash
 dfx canister call screenshot_service get_screenshot '("https://dfinity.org/")'
 ```
-
-Or you can use generated Candid UI to call the `get_screenshot` method.
 
 ## Example
 
