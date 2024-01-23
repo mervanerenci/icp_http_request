@@ -26,22 +26,26 @@ To deploy this canister, follow these steps:
 ``` 
 
 5. Replace `"YOUR-API-KEY-HERE"` in the `get_screenshot` method with your actual RapidAPI key before deploying.
+   
 6. Deploy the canister to the local replica. 
 ```bash
    dfx deploy
-``` 
+```
 
+Note: For production, it is recommended to store API keys and other private values in a .env file instead of hardcoding in code
 
 ## Usage
 
 To use the canister, you have 2 options. 
-1. use generated Candid UI to call the `get_screenshot` method.
+1. Use generated Candid UI to call the `get_screenshot` method.
 
 2. Or you can call the `get_screenshot` method with a URL as input. For example, to take a screenshot of the DFINITY website, run the following command:
 
 ```bash
 dfx canister call screenshot_service get_screenshot '("https://dfinity.org/")'
 ```
+
+
 
 ## Example
 
