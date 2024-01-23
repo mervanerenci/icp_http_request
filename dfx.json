@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "http_icp_backend": {
+      "candid": "src/http_icp_backend/http_icp_backend.did",
+      "package": "http_icp_backend",
+      "type": "rust"
+    },
+    "http_icp_frontend": {
+      "dependencies": [
+        "http_icp_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/http_icp_frontend/src/index.html"
+      },
+      "source": [
+        "src/http_icp_frontend/assets",
+        "dist/http_icp_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
